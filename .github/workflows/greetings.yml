@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: step1
-      run: a = grep -q "put" README.md 
+      run: a='grep -q "put" README.md'
     - name: step2
       run: echo $a
       
