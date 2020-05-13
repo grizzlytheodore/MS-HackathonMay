@@ -17,8 +17,8 @@ jobs:
       run: grep -q "put" README.md
     - name: step2
       run: b='grep -q "longRunningOperation:true" README.md'
-    - name: step2-2
-      if: ${{ $a==1 }}
-      run: grep -q "longRunningOperation:true" README.md
+    #- name: step2-2
+    #  if: ${{ $a==1 }}
+    #  run: grep -q "longRunningOperation:true" README.md
     - name: step3
-      run: a==b
+      run: $a==$b
