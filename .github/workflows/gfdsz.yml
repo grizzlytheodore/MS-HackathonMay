@@ -14,7 +14,8 @@ jobs:
     - name: step1
       run: |
         a='grep -q "put" README.md'
-       # b='grep -q "longRunningOperation:true" README.md'
         echo $a
-       # echo $b
-       # $a == $b
+#        b='grep -q "longRunningOperation:true" README.md'
+#        echo $a
+#        echo $b
+#        $a == $b
