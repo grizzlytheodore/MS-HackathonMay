@@ -13,8 +13,13 @@ jobs:
     - uses: actions/checkout@v2
     - name: step1
       run: |
-        a=$(grep -q "put" README.md)
-        echo "$a"
-        b=$(grep -q "longRunningOperation:true" README.md)
-        echo "$b"
+        if [ grep -q "put" README.md ]
+        then
+          echo here
+          grep -q "longRunningOperation:true" REAMDE.md
+        fi
+#        a=$(grep -q "put" README.md)
+#        echo "$a"
+#        b=$(grep -q "longRunningOperation:true" README.md)
+#        echo "$b"
 #        $a == $b
