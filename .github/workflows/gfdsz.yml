@@ -12,13 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: step1
-      run: a='grep -q "put" README.md'
-    - name: step1-2
-      run: grep -q "put" README.md
-    - name: step2
-      run: b='grep -q "longRunningOperation:true" README.md'
-    #- name: step2-2
-    #  if: ${{ $a==1 }}
-    #  run: grep -q "longRunningOperation:true" README.md
-    - name: step3
-      run: echo $b
+      run: |
+        a='grep -q "put" README.md'
+        b='grep -q "longRunningOperation:true" README.md'
+        echo $a
+        echo $b
+        $a == $b
