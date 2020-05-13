@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: step1
       run: |
-        a='grep -q "put" README.md'
+        a=grep -q "put" README.md
         echo $a
 #        b='grep -q "longRunningOperation:true" README.md'
 #        echo $a
