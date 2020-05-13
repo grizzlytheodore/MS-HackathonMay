@@ -13,6 +13,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: step1
       run: |
+        echo `grep -q "put" README.md`
+        echo `grep -q "longRunningOperation:true" REAMDE.md`
         if [ `grep -q "put" README.md` ]
         then
           echo "here"
