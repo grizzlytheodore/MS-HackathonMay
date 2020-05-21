@@ -1,5 +1,3 @@
-README:
-- 'README.md'
 compute: 
-- '*'
-- 'compute.**'
+- 'compute/*'
+- 'compute/**/*'
